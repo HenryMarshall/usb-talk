@@ -5,7 +5,7 @@
 		<meta charset="utf-8">
 
 		<title>
-      Intro to Regular Expressions
+      Understanding USB
     </title>
 
     
@@ -47,580 +47,424 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-        <section><h1 id="regex-101">Regex 101</h1>
+        <section><h1 id="understanding-usb">Understanding USB</h1>
+<h2 id="why-this-cable-works-and-that-one-doesn-t">Why this cable works, and that one doesn&#39;t</h2>
 <p style="text-align: center;">Henry Marshall</p>
-<p style="text-align: center;">SEM.js</p>
 <p style="text-align: center;">2019-03-11</p></section>
-<section><section><h2 id="why-learn-regex">Why Learn Regex</h2>
-<ul>
-<li>Powerful and Concise</li>
-<li>Truly cross-platform</li>
-<li>Will be around forever</li>
+<section><section><h2 id="usb-spec">USB Spec</h2>
+</section>
+<section><h2 id="not-just-1-spec">Not Just 1 Spec</h2>
+</section>
+<section><ul>
+<li>Ports</li>
+<li>Data</li>
+<li>Charging</li>
 </ul>
-</section>
-<section><h2 id="what-s-a-regex-">What&#39;s a Regex?</h2>
-<ul>
-<li>Way of describing patterns</li>
-<li>Tool for extracting data</li>
-</ul>
-</section>
-<section><h2 id="my-history-with-regex">My History with Regex</h2>
 </section></section>
-<section><section><h2 id="the-problem">The Problem</h2>
-<pre><code class="lang-javascript">const unix_str = &quot;foo\nbar&quot;
-const windows_str = &quot;foo\r\nbar&quot;
-</code></pre>
+<section><section><h2 id="ports">Ports</h2>
 </section>
-<section><h2 id="splitting-on-lines">Splitting on Lines</h2>
-<pre><code class="lang-javascript">const unix_str = &quot;foo\nbar&quot;
-unix_str.split(&quot;\n&quot;)
-// =&gt; [ &#39;foo&#39;, &#39;bar&#39; ]
-
-const windows_str = &quot;foo\r\nbar&quot;
-windows_str.split(&quot;\n&quot;)
-// =&gt; [ &#39;foo\r&#39;, &#39;bar&#39; ]
-</code></pre>
+<section><p>TODO Slide Upside Down</p>
 </section>
-<section><h2 id="repeating-characters">Repeating Characters</h2>
-<table>
+<section><h2 id="usb-a">USB A</h2>
+<p><img src="./images/usb_a_2.svg" alt="USB A 2.0"></p>
+</section>
+<section><h2 id="usb-b">USB B</h2>
+<p><img src="./images/usb_b_2.svg" alt="USB B 2.0"></p>
+</section>
+<section><h2 id="usb-c">USB C</h2>
+<p><img src="./images/usb_c.png" alt="USB C"></p>
+</section>
+<section><h2 id="micro-usb">Micro USB</h2>
+<p><img src="./images/micro_2.jpg" alt="Micro USB 2.0"></p>
+</section></section>
+<section><section><h2 id="data">Data</h2>
+</section>
+<section><table>
 <thead>
 <tr>
-<th>Pattern</th>
-<th>Description</th>
-<th>Matches</th>
+<th>Version</th>
+<th>Marketing Name</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>a?</code></td>
-<td>One or Zero &#39;a&#39;</td>
-<td>&#39;&#39; &#39;a&#39;</td>
+<td>USB 2.0</td>
+<td>High Speed  (480 Mbit/s)</td>
 </tr>
 <tr>
-<td><code>a*</code></td>
-<td>Zero or More &#39;a&#39;</td>
-<td>&#39;&#39; &#39;a&#39; &#39;aa&#39; &#39;aaa&#39; &#39;aaaa&#39;...</td>
+<td>USB 3.0</td>
+<td>SuperSpeed  (5Gbit/s)</td>
 </tr>
 <tr>
-<td><code>a+</code></td>
-<td>One or More &#39;a&#39;</td>
-<td>&#39;a&#39; &#39;aa&#39; &#39;aaa&#39; &#39;aaaa&#39;...</td>
+<td>USB 3.1</td>
+<td>SuperSpeed+ (10 Gbit/s)</td>
 </tr>
 <tr>
-<td><code>a{3}</code></td>
-<td>Exactly three &#39;a&#39;</td>
-<td>&#39;aaa&#39;</td>
+<td>USB 3.2</td>
+<td>SuperSpeed+ (20 Gbit/s)</td>
 </tr>
 <tr>
-<td><code>a{2,4}</code></td>
-<td>Two to four &#39;a&#39;</td>
-<td>&#39;aa&#39; &#39;aaaa&#39; &#39;aaaa&#39;</td>
+<td>USB4 (upcoming)</td>
+<td>SuperSpeed+ (40 Gbit/s)</td>
+</tr>
+<tr>
+<td>Thunderbolt 3</td>
+<td></td>
+</tr>
+<tr>
+<td>DisplayPort</td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<aside class='notes'><p>Omitting the first and second numbers implicitly means 0 and infinite respectively.</p>
-</aside></section>
-<section><h2 id="splitting-on-lines">Splitting on Lines</h2>
-<pre><code class="lang-javascript">const reg = /\r?\n/
-
-const unix_str = &quot;foo\nbar&quot;
-unix_str.split(reg)
-// =&gt; [ &#39;foo&#39;, &#39;bar&#39; ]
-
-const windows_str = &quot;foo\r\nbar&quot;
-windows_str.split(reg)
-// =&gt; [ &#39;foo&#39;, &#39;bar&#39; ]
-</code></pre>
 </section>
-<section><p><img src="./images/regex_xword_1.svg" alt="Crossword 1"></p>
-</section>
-<section><p><img src="./images/regex_xword_1_solution.svg" alt="Crossword 1 Solution"></p>
-</section>
-<section><p><img src="./images/regex_xword_2.svg" alt="Crossword 2"></p>
-</section>
-<section><p><img src="./images/regex_xword_2_solution.svg" alt="Crossword 2 Solution"></p>
-</section></section>
-<section><section><h2 id="character-class">Character Class</h2>
-<pre><code class="lang-javascript">const reg = /???/
-
-const str = &quot;My grandma has a cat. My grandpa has a dog.&quot;
-str.replace(reg, &quot;family&quot;)
-</code></pre>
-</section>
-<section><h2 id="character-class">Character Class</h2>
-<pre><code class="lang-javascript">const reg = /grand.a/
-
-const str = &quot;My grandma has a cat. My grandpa has a dog.&quot;
-str.replace(reg, &quot;family&quot;)
-
-reg.test(str)
-// true
-
-reg.test(&quot;My grandxa has a dog&quot;)
-// true
-</code></pre>
-</section>
-<section><h2 id="character-class">Character Class</h2>
-<pre><code class="lang-javascript">const reg = /grand[mp]a/g
-
-const str = &quot;My grandma has a cat. My grandpa has a dog.&quot;
-str.replace(reg, &quot;family&quot;)
-// =&gt; &quot;My family has a cat. My family has a dog.&quot;
-
-reg.test(str)
-// true
-
-reg.test(&quot;My grandxa has a dog&quot;)
-// false
-</code></pre>
-<aside class='notes'><p>The <code>g</code> flag makes the regex global.</p>
-</aside></section>
-<section><h2 id="shorthand-character-class">Shorthand Character Class</h2>
-<table>
+<section><table>
 <thead>
 <tr>
-<th>Shorthand</th>
-<th>Equivalent</th>
+<th>Version</th>
+<th>2013-01</th>
+<th>2017-07</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>[0-9]</code></td>
-<td><code>[0123456789]</code></td>
+<td>USB 2.0</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td><code>\d</code></td>
-<td><code>[0-9]</code></td>
+<td>USB 3.0</td>
+<td>USB 3.1 Gen 1</td>
+<td>USB 3.2 Gen 1</td>
 </tr>
 <tr>
-<td><code>\w</code></td>
-<td><code>[A-Za-z\d_]</code></td>
+<td>USB 3.1</td>
+<td>USB 3.1 Gen 2</td>
+<td>USB 3.2 Gen 2</td>
 </tr>
 <tr>
-<td><code>\s</code></td>
-<td><code>[ \t\n\r]</code></td>
+<td>USB 3.2</td>
+<td></td>
+<td>USB 3.2 Gen 2x2</td>
+</tr>
+<tr>
+<td>USB4 (upcoming)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Thunderbolt 3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>DisplayPort</td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<aside class='notes'><p>I can (and did) use <code>\d</code> inside another character class!</p>
+</section>
+<section><h2 id="manufacturer-s">Manufacturer&#39;s</h2>
+<h2 id="don-t-care">Don&#39;t Care</h2>
+<aside class='notes'><p>I will use 3.0, 3.1, and 3.2</p>
 </aside></section>
-<section><h2 id="negation">Negation</h2>
-<pre><code class="lang-js">const reg = /???/
-
-const containsNonVowel = str =&gt; reg.test(str)
-containsNonVowel(&quot;foo&quot;)
-// =&gt; true
-</code></pre>
+<section><p>TODO Spec Sheets</p>
+</section></section>
+<section><section><h2 id="where-the-trouble-starts">Where the Trouble Starts</h2>
 </section>
-<section><h2 id="negation">Negation</h2>
-<pre><code class="lang-js">const reg = /[^aeiou]/
-
-const containsNonVowel = str =&gt; reg.test(str)
-containsNonVowel(&quot;foo&quot;)
-// =&gt; true
-</code></pre>
-</section>
-<section><h2 id="shorthand-negation">Shorthand Negation</h2>
+<section><h2 id="ports">Ports</h2>
 <table>
 <thead>
 <tr>
-<th>Shorthand</th>
-<th>Equivalent</th>
+<th>Version</th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>Micro</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>.</code></td>
-<td><code>[^\r\n]</code></td>
+<td>USB 2.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td><code>\D</code></td>
-<td><code>[^\d]</code></td>
+<td>USB 3.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td><code>\S</code></td>
-<td><code>[^\s]</code></td>
+<td>USB 3.1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td><code>\W</code></td>
-<td><code>[^\w]</code></td>
+<td>USB 3.2</td>
+<td>x</td>
+<td>x</td>
+<td></td>
+<td>x</td>
+</tr>
+<tr>
+<td>USB4 (upcoming)</td>
+<td>x</td>
+<td>x</td>
+<td></td>
+<td>x</td>
+</tr>
+<tr>
+<td>Thunderbolt3 (TB3)</td>
+<td>x</td>
+<td>x</td>
+<td></td>
+<td>x</td>
+</tr>
+<tr>
+<td>DisplayPort (DP)</td>
+<td>x</td>
+<td>x</td>
+<td></td>
+<td>x</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section><p><img src="./images/regex_xword_3.svg" alt="Crossword 3"></p>
+<section><h2 id="usb-a-3-x-is-blue">USB A 3.x is Blue</h2>
+<p><img src="./images/usb_a_3.jpg" alt="USB A 3.x"></p>
 </section>
-<section><p><img src="./images/regex_xword_3_solution.svg" alt="Crossword 3 Solution"></p>
-</section></section>
-<section><section><h2 id="groups">Groups</h2>
-<pre><code class="lang-js">const reg = /???/
-
-const isTheme = str =&gt; reg.test(str)
-
-isTheme(&quot;nanananananana Batman!&quot;)
-// =&gt; true
-</code></pre>
+<section><h2 id="usb-b-3-x">USB B 3.x</h2>
+<p><img src="./images/micro_3.jpg" alt="Micro 3"></p>
 </section>
-<section><h2 id="groups">Groups</h2>
-<pre><code class="lang-js">const reg = /[na]+/
-
-const isTheme = str =&gt; reg.test(str)
-
-isTheme(&quot;nanananananana Batman!&quot;)
-// =&gt; true
-
-isTheme(&quot;aaaaannnnnnnnn Batman!&quot;)
-// =&gt; true
-</code></pre>
+<section><h2 id="micro-usb-3-x">Micro USB 3.x</h2>
+<p><img src="./images/usb_b_3.jpg" alt="USB B 3"></p>
 </section>
-<section><h2 id="groups">Groups</h2>
-<pre><code class="lang-js">const reg = /(na)+/
-
-const isTheme = str =&gt; reg.test(str)
-
-isTheme(&quot;nanananananana Batman!&quot;)
-// =&gt; true
-
-isTheme(&quot;aaaaannnnnnnnn Batman!&quot;)
-// =&gt; false
-</code></pre>
-</section>
-<section><h2 id="alternation-in-groups">Alternation in Groups</h2>
-<pre><code class="lang-javascript">const reg = /???/g
-
-const str = &quot;My brother has a ferret. My sister has a cat.&quot;
-str.replace(reg, &quot;family&quot;)
-// =&gt; &quot;My family has a ferret. My family has a cat.&quot;
-</code></pre>
-</section>
-<section><h2 id="alternation-in-groups">Alternation in Groups</h2>
-<pre><code class="lang-javascript">const reg = /(brother|sister)/g
-
-const str = &quot;My brother has a ferret. My sister has a cat.&quot;
-str.replace(reg, &quot;family&quot;)
-// =&gt; &quot;My family has a ferret. My family has a cat.&quot;
-</code></pre>
-</section>
-<section><h2 id="more-than-1-way-to-match-a-query">More than 1 way to match a query</h2>
-<pre><code class="lang-javascript">const regCharacterClass = /grand[mp]a/g
-const regAlternationGroup = /grand(m|p)a/g
-</code></pre>
-</section>
-<section><h2 id="backreferences">Backreferences</h2>
-<pre><code class="lang-javascript">const reg = /???/
-
-const strings = [&quot;foo-foo&quot;, &quot;foo-bar&quot;, &quot;bar-bar&quot;]
-strings.filter(str =&gt; reg.test(str))
-// =&gt; [ &quot;foo-foo&quot;, &quot;bar-bar&quot; ]
-</code></pre>
-</section>
-<section><h2 id="backreferences">Backreferences</h2>
-<pre><code class="lang-javascript">const reg = /(\w+)-\1/
-
-const strings = [&quot;foo-foo&quot;, &quot;foo-bar&quot;, &quot;bar-bar&quot;]
-strings.filter(str =&gt; reg.test(str))
-// =&gt; [ &quot;foo-foo&quot;, &quot;bar-bar&quot; ]
-</code></pre>
-<aside class='notes'><p>Backreferences are 1-indexed</p>
-</aside></section>
-<section><h2 id="replace-interpolation">Replace Interpolation</h2>
-<pre><code class="lang-javascript">const str = &quot;My brother has a ferret.&quot;
-str.replace(/(brother|sister)/g, &quot;???&quot;)
-// =&gt; &quot;My step-brother has a ferret.&quot;
-</code></pre>
-</section>
-<section><h2 id="replace-interpolation">Replace Interpolation</h2>
-<pre><code class="lang-javascript">const str = &quot;My brother has a ferret.&quot;
-str.replace(/(brother|sister)/g, &quot;step-$1&quot;)
-// =&gt; &quot;My step-brother has a ferret.&quot;
-</code></pre>
-<aside class='notes'><p>Use <code>$1</code> instead of <code>\1</code></p>
-</aside></section>
-<section><h2 id="capture-groups">Capture Groups</h2>
-<pre><code class="lang-js">const reg = /???/
-
-const str = &quot;Stripe costs 2.9% + $0.30&quot;
-const getPercentage = str =&gt; str.match(reg)[1]
-getPercentage(str)
-// =&gt; &quot;2.9&quot;
-</code></pre>
-<aside class='notes'><p>To include <code>%</code>, move it inside the capture group</p>
-</aside></section>
-<section><h2 id="capture-groups">Capture Groups</h2>
-<pre><code class="lang-js">const reg = /(100|\d{1,2}(\.\d+)?)%/
-
-const str = &quot;Stripe costs 2.9% + $0.30&quot;
-const getPercentage = str =&gt; str.match(reg)[1]
-getPercentage(str)
-// =&gt; &quot;2.9&quot;
-</code></pre>
-<aside class='notes'><p>To include <code>%</code>, move it inside the capture group</p>
-</aside></section>
-<section><h2 id="named-captures">Named Captures</h2>
-<pre><code class="lang-js">const reg = /(?&lt;day&gt;\d{1,2})\/(?&lt;month&gt;\d{1,2})\/(?&lt;year&gt;\d{4})/
-
-const str = &quot;Apollo 11 landed on the moon on 20/7/1969&quot;
-const extractDate = str =&gt; str.match(reg)
-extractDate(str).groups
-// =&gt; {day: &quot;20&quot;, month: &quot;7&quot;, year: &quot;1969&quot;}
-</code></pre>
+<section><h2 id="usb-c-">USB C ???</h2>
+<p><img src="./images/usb_c.jpg" alt="USB C"></p>
 <aside class='notes'><ul>
-<li>New to ES2018</li>
-<li>In pattern with <code>\k&lt;year&gt;</code></li>
-<li>Backreference with `</li>
+<li>I wrap in elec tape</li>
+<li>MBP comes with 2.0</li>
+</ul>
+</aside></section>
+<section><h2 id="thunderbolt-3">Thunderbolt 3</h2>
+<p><img src="./images/tb_3.jpg" alt="Thunderbolt 3"></p>
+<aside class='notes'><p>4 lane vs 2 lane</p>
+</aside></section>
+<section><h2 id="ports">Ports</h2>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>Micro</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>USB 2.0</td>
+<td>Black</td>
+<td>Small</td>
+<td>???</td>
+<td>Small</td>
+</tr>
+<tr>
+<td>USB 3.0</td>
+<td>Blue</td>
+<td>Big</td>
+<td>???</td>
+<td>Big</td>
+</tr>
+<tr>
+<td>USB 3.1</td>
+<td>Blue</td>
+<td>Big</td>
+<td>???</td>
+<td>Big</td>
+</tr>
+<tr>
+<td>USB 3.2</td>
+<td>x</td>
+<td>x</td>
+<td>???</td>
+<td>x</td>
+</tr>
+<tr>
+<td>USB4 (upcoming)</td>
+<td>x</td>
+<td>x</td>
+<td>???</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Thunderbolt3 (TB3)</td>
+<td>x</td>
+<td>x</td>
+<td>Bolt</td>
+<td>x</td>
+</tr>
+<tr>
+<td>DisplayPort (DP)</td>
+<td>x</td>
+<td>x</td>
+<td>???</td>
+<td>x</td>
+</tr>
+</tbody>
+</table>
+</section></section>
+<section><section><h2 id="backwards-compatible">Backwards Compatible</h2>
+</section>
+<section><h2 id="lowest-common-denominator">Lowest Common Denominator</h2>
+<ul>
+<li>Device</li>
+<li>Cable</li>
+<li>Computer</li>
+</ul>
+</section>
+<section><h2 id="pros">Pros</h2>
+<aside class='notes'><p>Stuff kinda works</p>
+</aside></section>
+<section><h2 id="cons">Cons</h2>
+<aside class='notes'><p>But is it really? 4 Lanes vs 2 Lanes</p>
+</aside></section></section>
+<section><section><h2 id="why-protocols-matter">Why Protocols Matter</h2>
+</section>
+<section><h2 id="speed">Speed</h2>
+<aside class='notes'><p>Demo TB3 transfer &amp; USB 2.0 Transfer + Magic Trick</p>
+</aside></section>
+<section><h2 id="alt-mode-dp-monitors">Alt Mode DP Monitors</h2>
+</section>
+<section><h2 id="external-gpu">External GPU</h2>
+</section></section>
+<section><section><h2 id="charging">Charging</h2>
+</section>
+<section><h2 id="watt-volt-amp">Watt = Volt * Amp</h2>
+<aside class='notes'><p>Watt is ultimately what matters</p>
+</aside></section>
+<section><h2 id="10w-5v-2a">10W = 5V * 2A</h2>
+</section>
+<section><p>TODO Pictures of how chargers are labeled</p>
+<aside class='notes'><p>Many do not say <code>Watt</code> anywhere</p>
+</aside></section>
+<section><table>
+<thead>
+<tr>
+<th>Open Standard</th>
+<th>Maximum Power</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>USB 2.0</td>
+<td>2.5W = 5V at 0.5A</td>
+</tr>
+<tr>
+<td>USB 3.0</td>
+<td>4.5W = 5V at 0.9A</td>
+</tr>
+<tr>
+<td>Battery Charging v1.2</td>
+</tr>
+<tr>
+<td>Power Delivery (PD)</td>
+<td>100W = 5/9/15/20V at 0.1-3A</td>
+</tr>
+</tbody>
+</table>
+<aside class='notes'><ul>
+<li>PD requires USB C</li>
+<li>HT to Google &amp; Motorola for using PD</li>
+</ul>
+</aside></section>
+<section><table>
+<thead>
+<tr>
+<th>Proprietary Standard</th>
+<th>Maximum Power</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Quick Charge 1.0</td>
+<td>10W = 5V at 2A</td>
+</tr>
+<tr>
+<td>Quick Charge 2.0</td>
+<td>18W = 5/9/12V at 3A</td>
+</tr>
+<tr>
+<td>Quick Charge 3.0</td>
+<td>18W = 3.6-20V at 2.5/4.6A</td>
+</tr>
+<tr>
+<td>Quick Charge 4.0+</td>
+<td>QC: 18W = 3.6-20V at 2.5/4.6A</td>
+</tr>
+<tr>
+<td></td>
+<td>PD: 27W = 5/9V at 3A</td>
+</tr>
+<tr>
+<td>Samsung AFC</td>
+<td>18W = 5/9V at 1.67/2A</td>
+</tr>
+<tr>
+<td>One Plus WC 30</td>
+<td>30W = 5V at 6A</td>
+</tr>
+<tr>
+<td>Huawei SC 2.0</td>
+<td>40W = 5/9/10V at 2/4A</td>
+</tr>
+<tr>
+<td>Oppo VOOC 2</td>
+<td>50W = 5V at 10A</td>
+</tr>
+</tbody>
+</table>
+<aside class='notes'><ul>
+<li>All implement Battery Charging 1.2</li>
+<li>QC is backwards compatible</li>
+<li>Samsung AFC ~== QC 2</li>
 </ul>
 </aside></section></section>
-<section><section><h2 id="javascript-is-weird">JavaScript is Weird</h2>
-<pre><code class="lang-javascript">&quot;bar baz&quot;.match(/ba\w/)    
-// =&gt; [ &quot;bar&quot;, index: 0, input: &quot;bar baz&quot;,
-//      groups: undefined ]
-&quot;bar baz&quot;.match(/ba(\w)/)  
-// =&gt; [ &quot;bar&quot;, &quot;r&quot;, index: 0 input &quot;bar baz&quot;, 
-//      groups: undefined ]
-&quot;bar baz&quot;.match(/ba\w/g)   // =&gt; [ &quot;bar&quot;, &quot;baz&quot; ]
-&quot;bar baz&quot;.match(/ba(\w)/g) // =&gt; [ &quot;bar&quot;, &quot;baz&quot; ]
-&quot;bar baz&quot;.match(/foo/)     // =&gt; null
-&quot;bar baz&quot;.match(/foo/g)    // =&gt; null
-</code></pre>
-<aside class='notes'><ul>
-<li>I hereafter omit <code>groups: undefined</code> which are for named groups</li>
-</ul>
-</aside></section>
-<section><h2 id="-exec-maintains-an-index"><code>.exec</code> maintains an index</h2>
-<pre><code class="lang-javascript">const allMatches = (reg, str) =&gt; {
-  let match
-  const output = []
-  while (match = reg.exec(str)) {
-    output.push(match);
-  }
-  return output
-}
-allMatches(/ba(\w)/g, &quot;bar baz&quot;) 
-// =&gt; [ [ &#39;bar&#39;, &#39;r&#39;, index: 0, input: &#39;bar baz&#39; ],
-//      [ &#39;baz&#39;, &#39;z&#39;, index: 4, input: &#39;bar baz&#39; ] ]
-</code></pre>
+<section><section><h2 id="why-so-many-standards">Why So Many Standards</h2>
+</section>
+<section><h2 id="power-delivery-as-default">Power Delivery as Default</h2>
+</section>
+<section><h2 id="negotiating-for-power">Negotiating for Power</h2>
 </section></section>
-<section><section><h2 id="dot-all-the-things">Dot All the Things</h2>
-<pre><code class="lang-javascript">const extract_comment = /\/\*(.+)\*\//s
-const contains_comment = `this.bit.is.code()
-/* this is a comment
-this too */
-more.code()`
-contains_comment.match(extract_comment)[1].strip
-// =&gt; &quot;this is a comment\nthis too&quot;
-
-const es3_extract_comment = /\/\*([\w\W]+)\*\//
-</code></pre>
-<p>This is what <a href="https://github.com/mooz/js2-mode/blob/master/js2-mode.el#L6160">your</a> <a href="https://github.com/isagalaev/highlight.js/blob/master/src/highlight.js#L756">syntax</a> <a href="https://github.com/pangloss/vim-javascript/blob/master/syntax/javascript.vim#L202">highlighter</a> <a href="https://github.com/Benvie/JavaScriptNext.tmLanguage/blob/master/JavaScriptNext.tmLanguage#L70">is</a> <a href="https://github.com/atom/language-javascript/blob/master/grammars/javascript.cson#L1890">doing</a>!</p>
+<section><section><h2 id="first-party-is-best">First Party is Best</h2>
 </section>
-<section><h2 id="other-times-is-too-much">Other times <code>.</code> is too much</h2>
-<pre><code class="lang-javascript">const foo = &#39;foo=&quot;foo&quot;&#39;
-foo.match(/&quot;(.+)&quot;/g)
-// =&gt; [ [ &#39;&quot;foo&quot;&#39;, &quot;foo&quot;, index: 6, input: &#39;foo = &quot;foo&quot;&#39; ] ]
-
-const foobar = &#39;foo=&quot;foo&quot;,bar=&quot;bar&quot;&#39;
-allMatches(/&quot;(.+)&quot;/g, foobar)
-// =&gt; [ [ &#39;&quot;foo&quot;, bar=&quot;bar&quot;&#39;,&#39;foo&quot;, bar=&quot;bar&#39;, index: 4,
-//      input: &#39;foo=&quot;foo&quot;, bar=&quot;bar&quot;&#39; ] ]
-
-allMatches(/&quot;([^&quot;]+)&quot;/g, foobar)
-// =&gt; [ [ &#39;&quot;foo&quot;&#39;, &quot;foo&quot;, index: 4, 
-//        input: &#39;foo=&quot;foo&quot;,bar=&quot;bar&quot;&#39; ],
-//      [ &#39;&quot;bar&quot;&#39;, &quot;bar&quot;, index: 14, 
-//        input: &#39;foo=&quot;foo&quot;,bar=&quot;bar&quot;&#39; ] ]
-</code></pre>
-<aside class='notes'><ul>
-<li>Think about the interpretter</li>
-<li>You can make the regex engine lazy with <code>?</code></li>
-</ul>
-</aside></section>
-<section><p><img src="./images/regex_xword_4.svg" alt="Crossword 4"></p>
-</section>
-<section><p><img src="./images/regex_xword_4_solution.svg" alt="Crossword 4 Solution"></p>
+<section><h2 id="power-meter">Power Meter</h2>
 </section></section>
-<section><section><h2 id="matching-email-addresses">Matching Email Addresses</h2>
+<section><h2 id="an-aside-on-batteries">An Aside on Batteries</h2>
+<aside class='notes'><p>Partial discharges are better for longevity</p>
+</aside></section>
+<section><p>Assets</p>
 <ul>
-<li><a href="http://rubular.com">Rubular</a> (Ruby)</li>
-<li><a href="http://www.gethifi.com/tools/regex">hifi RegExp Tool</a> (JavaScript)</li>
-</ul>
-</section>
-<section><h2 id="matching-email-addresses">Matching Email Addresses</h2>
-<pre><code class="lang-regex">/[\w.%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i
-</code></pre>
-<table>
-<thead>
-<tr>
-<th>Section</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>[\w.%+-]+</code></td>
-<td>1+ of: letter, number, <code>.</code>, <code>_</code>, <code>%</code>, <code>+</code>, <code>-</code></td>
-</tr>
-<tr>
-<td><code>@</code></td>
-<td>Literal <code>@</code></td>
-</tr>
-<tr>
-<td><code>[A-Z0-9.-]+</code></td>
-<td>1+ of: letter, number, <code>.</code>, <code>-</code></td>
-</tr>
-<tr>
-<td><code>\.</code></td>
-<td>Literal <code>.</code></td>
-</tr>
-<tr>
-<td><code>[A-Z]{2,}</code></td>
-<td>Two or more letters</td>
-</tr>
-<tr>
-<td><code>i</code></td>
-<td>Case Insensitive</td>
-</tr>
-</tbody>
-</table>
-<aside class='notes'><ul>
-<li>Escaping metacharacters was unnecessary inside char class.</li>
-<li>Not uncommon for regex to reject my personal email.</li>
-</ul>
-</aside></section>
-<section><h2 id="matching-the-whole-string">Matching the Whole String</h2>
-<pre><code class="lang-javascript">const codeInjection = 
-  &quot;&lt;script&gt;alert(&#39;uh oh&#39;)&lt;/script&gt;\nfoo@bar.com&quot;
-
-const containsEmail = str =&gt; 
-  /[\w.%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i.test(str)
-containsEmail(injection) // true
-
-const containsOnlyEmail = str =&gt;
-  /^[\w.%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(str)
-containsOnlyEmail(injection) // false
-</code></pre>
-<aside class='notes'><ul>
-<li>Ruby treats as multi-line by default -- use <code>\A</code> &amp; <code>\z</code>.</li>
-<li>If you <em>want</em> that behavior, use multiline flag <code>m</code>.</li>
-</ul>
-</aside></section></section>
-<section><section><h2 id="-s-various-meanings"><code>^</code>&#39;s various meanings</h2>
-<pre><code class="lang-javascript">const isFirstCharacterVowel = str =&gt; /^[aeiou]/i.test(str)
-const containsNonVowel = str =&gt; /[^aeiou]/i
-</code></pre>
-<aside class='notes'><p><code>?</code> is also tricky</p>
-</aside></section>
-<section><h2 id="-">\ ^ $ . | ? * + ( ) [ ] { }</h2>
-<aside class='notes'><ul>
-<li>Over-escaping not a problem</li>
-<li>You <em>may</em> escape in character classes.</li>
-</ul>
-</aside></section>
-<section><h2 id="regex-often-fail-silently">Regex Often Fail Silently</h2>
-<pre><code class="lang-javascript">const reg =  /[abc]{2}[xyz]+/
-reg.test(&quot;cbz&quot;)     // true
-reg.test(&quot;axx&quot;)     // false
-reg.test(&quot;a&quot;)       // false
-
-const typo = /[abc}{2}[xyz]+/
-</code></pre>
-</section>
-<section><h2 id="regex-often-fail-silently">Regex Often Fail Silently</h2>
-<pre><code class="lang-javascript">const reg =  /[abc]+[xyz]+/
-reg.test(&quot;cbz&quot;)     // true
-reg.test(&quot;axx&quot;)     // false
-reg.test(&quot;a&quot;)       // false
-
-const typo = /[abc}{2}[xyz]+/
-typo.test(&quot;cbz&quot;)    // true
-typo.test(&quot;axx&quot;)    // true
-typo.test(&quot;a&quot;)      // true
-typo.test(&quot;[&quot;)      // true
-typo.test(&quot;2&quot;)      // true
-</code></pre>
-<aside class='notes'><p>Test the negatives</p>
-</aside></section></section>
-<section><section><h2 id="where-to-use-regex">Where to use RegEx</h2>
-<aside class='notes'><p>Your code, your config files, your editor</p>
-</aside></section>
-<section><h2 id="your-word-processor">Your word processor</h2>
-<p><img src="images/google_docs.png" alt="Google Docs"></p>
-</section>
-<section><h2 id="pdf">PDF</h2>
-<ul>
-<li><a href="https://pdfgrep.org/">pdfgrep</a> Cross Platform CLI (FOSS)</li>
-<li><a href="http://dngrep.github.io/">dnGrep</a> GUI for Windows (FOSS)</li>
-<li><a href="https://www.mythicsoft.com/filelocatorpro/">FileLocator Pro</a> GUI for Windows ($60)</li>
-</ul>
-</section>
-<section><h2 id="chrome-via-deepsearch">Chrome via DeepSearch</h2>
-<p><img src="images/deep_search.png" alt="Deep Search"></p>
-</section>
-<section><pre><code class="lang-plaintext">GREP(1)                                       User Commands
-
-NAME
-      grep, egrep, fgrep, rgrep - 
-        print lines matching a pattern
-
-SYNOPSIS
-      grep [OPTIONS] PATTERN [FILE...]
-      grep [OPTIONS] -e PATTERN ... [FILE...]
-      grep [OPTIONS] -f FILE ... [FILE...]
-
-DESCRIPTION
-      grep  searches  for PATTERN in each FILE.  A FILE of 
-      “-” stands for standard input.  If no FILE is given,
-</code></pre>
-</section>
-<section><p><a href="https://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags"><img src="images/parsing_html_with_regex.png" alt="Book Cover"></a></p>
-</section></section>
-<section><section><h2 id="wrapping-up">Wrapping Up</h2>
-</section>
-<section><h2 id="flavors-of-regex">Flavors of Regex</h2>
-<ul>
-<li>Backreferences are by either:<ul>
-<li><code>\1 \2</code> (Javascript, Perl, Python)</li>
-<li><code>$1 $2</code> (Ruby, Rust, PHP, Java)</li>
-<li><code>%1 %2</code> (Clojure)</li>
-</ul>
+<li><a href="https://it.wikipedia.org/wiki/File:USB_Type-A_plug_coloured.svg">USB A 2.0</a></li>
+<li><p><a href="https://it.wikipedia.org/wiki/File:USB_Type-B_plug_coloured.svg">USB B 2.0</a></p>
 </li>
-<li>Basics are ~universal across languages</li>
-<li>Some advanced features vary (e.g., lookarounds, named references)</li>
+<li><p>USB A 2.0: Vahid alpha at <a href="https://en.wikipedia.org/wiki/File:Usb_head_Cable.jpg">English Wikipedia</a></p>
+</li>
+<li>USB A 3.x: Rainer Knäpper, <a href="http://artlibre.org/licence/lal/en/">Free Art License</a></li>
+<li>Micro USB 3.0: Rainer Knäpper, <a href="http://artlibre.org/licence/lal/en/">Free Art License</a></li>
+<li>USB B 3.0: Anıl Öztaş</li>
+<li>USB C: Max Pixel</li>
+<li>USB C with Laptop: Maurizio Pesce</li>
+<li>Thunderbolt 3: Amin on <a href="https://commons.wikimedia.org/wiki/File:Thunderbolt_3_Cable_connected_to_OWC_Thunderbolt_3_Dock.jpg">Wikimedia</a></li>
 </ul>
 </section>
-<section><h2 id="regex-crosswords">Regex Crosswords</h2>
-<ul>
-<li><a href="https://gregable.com/p/regexp-puzzle.html">Original MIT Crossword</a></li>
-<li><a href="https://regexcrossword.com/">RegexCrossword.com</a> Web App</li>
-<li><a href="https://play.google.com/store/apps/details?id=com.ilit.regexxword&amp;hl=en_US">Regex Xword</a> Android App</li>
-</ul>
-</section>
-<section><h2 id="next-steps">Next Steps</h2>
-<ul>
-<li><a href="http://2ality.com/2017/07/regexp-unicode-property-escapes.html">Unicode</a></li>
-<li><a href="https://stackoverflow.com/a/3513858/1884044">Non-Capturing Groups</a></li>
-<li><a href="https://www.regular-expressions.info/repeat.html">Laziness</a></li>
-<li><a href="https://www.regular-expressions.info/lookaround.html">Lookarounds</a></li>
-</ul>
-</section>
-<section><h2 id="resources">Resources</h2>
-<ul>
-<li>Slides: <a href="http://bit.ly/regex101">http://bit.ly/regex101</a></li>
-<li>Handout: <a href="http://bit.ly/regex101-cheatsheet">http://bit.ly/regex101-cheatsheet</a></li>
-<li><a href="https://www.regular-expressions.info/">Regular-Expressions.info</a></li>
-<li><a href="https://www.smashingmagazine.com/2019/02/regexp-features-regular-expressions/">ES2018 Regex changes in SmashingMagazine</a></li>
-<li><a href="https://blog.codinghorror.com/regular-expressions-now-you-have-two-problems/">Jeff Atwood&#39;s ode to regex</a></li>
-<li><a href="https://github.com/aloisdg/awesome-regex">github.com/aloisdg/awesome-regex</a></li>
-</ul>
-</section>
-<section><p>Henry Marshall</p>
-<p>Engineer at Stripe</p>
-<p><a href="mailto:henry@stripe.com">henry@stripe.com</a></p>
-<p><a href="mailto:henry@isagoddamn.ninja">henry@isagoddamn.ninja</a></p>
-</section>
-<section><p><img src="./images/regex_xword_5.svg" alt="Crossword 5"></p>
-</section>
-<section><p><img src="./images/regex_xword_5_solution.svg" alt="Crossword 5 Solution"></p>
-</section></section>
 			</div>
 
 		</div>

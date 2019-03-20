@@ -300,3 +300,7 @@ Assets
 - USB C: Max Pixel
 - USB C with Laptop: Maurizio Pesce
 - Thunderbolt 3: Amin on [Wikimedia](https://commons.wikimedia.org/wiki/File:Thunderbolt_3_Cable_connected_to_OWC_Thunderbolt_3_Dock.jpg)
+
+------------
+
+## Questions

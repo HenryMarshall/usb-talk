@@ -63,13 +63,13 @@
 </section></section>
 <section><section><h2 id="ports">Ports</h2>
 </section>
-<section><p>TODO Slide Upside Down</p>
+<section><p><img src="./images/usb_a_2_upside_down.png" alt="USB A 2.0 Upside Down"></p>
 </section>
 <section><h2 id="usb-a">USB A</h2>
-<p><img src="./images/usb_a_2.svg" alt="USB A 2.0"></p>
+<p><img src="./images/usb_a_2.jpg" alt="USB A 2.0"></p>
 </section>
 <section><h2 id="usb-b">USB B</h2>
-<p><img src="./images/usb_b_2.svg" alt="USB B 2.0"></p>
+<p><img src="./images/usb_b_2.png" alt="USB B 2.0"></p>
 </section>
 <section><h2 id="usb-c">USB C</h2>
 <p><img src="./images/usb_c.png" alt="USB C"></p>
@@ -160,17 +160,11 @@
 <tr>
 <td>DisplayPort</td>
 <td></td>
-<td></td>
 </tr>
 </tbody>
 </table>
-</section>
-<section><h2 id="manufacturer-s">Manufacturer&#39;s</h2>
-<h2 id="don-t-care">Don&#39;t Care</h2>
 <aside class='notes'><p>I will use 3.0, 3.1, and 3.2</p>
-</aside></section>
-<section><p>TODO Spec Sheets</p>
-</section></section>
+</aside></section></section>
 <section><section><h2 id="where-the-trouble-starts">Where the Trouble Starts</h2>
 </section>
 <section><h2 id="ports">Ports</h2>
@@ -187,52 +181,52 @@
 <tbody>
 <tr>
 <td>USB 2.0</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
 </tr>
 <tr>
 <td>USB 3.0</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
 </tr>
 <tr>
 <td>USB 3.1</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
 </tr>
 <tr>
 <td>USB 3.2</td>
-<td>x</td>
-<td>x</td>
-<td></td>
-<td>x</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
 </tr>
 <tr>
 <td>USB4 (upcoming)</td>
-<td>x</td>
-<td>x</td>
-<td></td>
-<td>x</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
 </tr>
 <tr>
 <td>Thunderbolt3 (TB3)</td>
-<td>x</td>
-<td>x</td>
-<td></td>
-<td>x</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
 </tr>
 <tr>
 <td>DisplayPort (DP)</td>
-<td>x</td>
-<td>x</td>
-<td></td>
-<td>x</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
 </tr>
 </tbody>
 </table>
@@ -251,6 +245,12 @@
 <aside class='notes'><ul>
 <li>I wrap in elec tape</li>
 <li>MBP comes with 2.0</li>
+</ul>
+</aside></section>
+<section><p><img src="./images/unhelpful_oem.png" alt="Unhelpful OEM"></p>
+<aside class='notes'><ul>
+<li>This is getting better</li>
+<li>Pictured is <a href="https://www.samsung.com/us/computing/windows-laptops/notebook-series-9/notebook-9-15-led-full-hd-core-i7-np900x5l-k02us/#specs">Samsung Notebook 9</a></li>
 </ul>
 </aside></section>
 <section><h2 id="thunderbolt-3">Thunderbolt 3</h2>
@@ -321,20 +321,15 @@
 </tbody>
 </table>
 </section></section>
-<section><section><h2 id="backwards-compatible">Backwards Compatible</h2>
+<section><section><h2 id="graceful-degredation">Graceful Degredation</h2>
 </section>
 <section><h2 id="lowest-common-denominator">Lowest Common Denominator</h2>
 <ul>
-<li>Device</li>
+<li>Host</li>
+<li>Peripheral</li>
 <li>Cable</li>
-<li>Computer</li>
 </ul>
-</section>
-<section><h2 id="pros">Pros</h2>
-<aside class='notes'><p>Stuff kinda works</p>
-</aside></section>
-<section><h2 id="cons">Cons</h2>
-<aside class='notes'><p>But is it really? 4 Lanes vs 2 Lanes</p>
+<aside class='notes'><p>Cables can partially break</p>
 </aside></section></section>
 <section><section><h2 id="why-protocols-matter">Why Protocols Matter</h2>
 </section>
@@ -351,9 +346,7 @@
 <aside class='notes'><p>Watt is ultimately what matters</p>
 </aside></section>
 <section><h2 id="10w-5v-2a">10W = 5V * 2A</h2>
-</section>
-<section><p>TODO Pictures of how chargers are labeled</p>
-<aside class='notes'><p>Many do not say <code>Watt</code> anywhere</p>
+<aside class='notes'><p>Many chargers do not say <code>Watt</code> anywhere</p>
 </aside></section>
 <section><table>
 <thead>
@@ -373,10 +366,11 @@
 </tr>
 <tr>
 <td>Battery Charging v1.2</td>
+<td>25W  = 5V at 5A (Typical 2A)</td>
 </tr>
 <tr>
 <td>Power Delivery (PD)</td>
-<td>100W = 5/9/15/20V at 0.1-3A</td>
+<td>100W = 5/9/15/20V at 5A</td>
 </tr>
 </tbody>
 </table>
@@ -407,11 +401,7 @@
 </tr>
 <tr>
 <td>Quick Charge 4.0+</td>
-<td>QC: 18W = 3.6-20V at 2.5/4.6A</td>
-</tr>
-<tr>
-<td></td>
-<td>PD: 27W = 5/9V at 3A</td>
+<td>QC 3 &amp; 27W PD (9V at 3A)</td>
 </tr>
 <tr>
 <td>Samsung AFC</td>
@@ -432,28 +422,44 @@
 </tbody>
 </table>
 <aside class='notes'><ul>
+<li>Why do this? Predate PD &amp; Very Fast</li>
 <li>All implement Battery Charging 1.2</li>
-<li>QC is backwards compatible</li>
 <li>Samsung AFC ~== QC 2</li>
 </ul>
+</aside></section>
+<section><h2 id="lowest-common-denominator">Lowest Common Denominator</h2>
+<ul>
+<li>Charger</li>
+<li>Device</li>
+<li>Cable</li>
+</ul>
+<aside class='notes'><p>Cable ~only relevant for 2A+</p>
 </aside></section></section>
-<section><section><h2 id="why-so-many-standards">Why So Many Standards</h2>
-</section>
-<section><h2 id="power-delivery-as-default">Power Delivery as Default</h2>
-</section>
-<section><h2 id="negotiating-for-power">Negotiating for Power</h2>
-</section></section>
-<section><section><h2 id="first-party-is-best">First Party is Best</h2>
-</section>
+<section><section><h2 id="maximizing-your-speed">Maximizing your Speed</h2>
+<aside class='notes'><p>First party best unless apple</p>
+</aside></section>
 <section><h2 id="power-meter">Power Meter</h2>
 </section></section>
-<section><h2 id="an-aside-on-batteries">An Aside on Batteries</h2>
-<aside class='notes'><p>Partial discharges are better for longevity</p>
+<section><section><h2 id="batteries">Batteries</h2>
+<aside class='notes'><ul>
+<li>Why rapidly discharge at beginning</li>
+<li>Partial discharges are better for longevity</li>
+<li>Complete discharge to reset meter</li>
+</ul>
 </aside></section>
+<section><h2 id="wireless-charging">Wireless Charging</h2>
+<p><img src="./images/qi_logo.svg" alt="Qi Logo"></p>
+<aside class='notes'><ul>
+<li>Wattage Matters</li>
+<li>Wireless less efficient</li>
+<li>Safer for public charging</li>
+<li>Samsung 15W; Apple 7.5W</li>
+</ul>
+</aside></section></section>
 <section><p>Assets</p>
 <ul>
 <li><a href="https://it.wikipedia.org/wiki/File:USB_Type-A_plug_coloured.svg">USB A 2.0</a></li>
-<li><p><a href="https://it.wikipedia.org/wiki/File:USB_Type-B_plug_coloured.svg">USB B 2.0</a></p>
+<li><p>USB B 2.0 by <a href="https://commons.wikimedia.org/wiki/File:USB2HAB.jpg">Edwin Javier Nuñez</a></p>
 </li>
 <li><p>USB A 2.0: Vahid alpha at <a href="https://en.wikipedia.org/wiki/File:Usb_head_Cable.jpg">English Wikipedia</a></p>
 </li>

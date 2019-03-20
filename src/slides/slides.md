@@ -34,19 +34,19 @@ charset: "utf-8"
 
 ----------
 
-TODO Slide Upside Down
+![USB A 2.0 Upside Down](./images/usb_a_2_upside_down.png)
 
 ----------
 
 ## USB A
 
-![USB A 2.0](./images/usb_a_2.svg)
+![USB A 2.0](./images/usb_a_2.jpg)
 
 ----------
 
 ## USB B
 
-![USB B 2.0](./images/usb_b_2.svg)
+![USB B 2.0](./images/usb_b_2.png)
 
 ----------
 
@@ -88,16 +88,7 @@ TODO Slide Upside Down
 | Thunderbolt 3   |               |                 |
 | DisplayPort     |               |                 |
 
-----------
-
-## Manufacturer's 
-## Don't Care
-
 Note: I will use 3.0, 3.1, and 3.2
-
-----------
-
-TODO Spec Sheets
 
 ==========
 
@@ -109,13 +100,13 @@ TODO Spec Sheets
 
 | Version            | A     | B     | C     | Micro |
 | ------------------ | ----- | ----- | ----- | ----- |
-| USB 2.0            |       |       |       |       |
-| USB 3.0            |       |       |       |       |
-| USB 3.1            |       |       |       |       |
-| USB 3.2            | x     | x     |       | x     |
-| USB4 (upcoming)    | x     | x     |       | x     |
-| Thunderbolt3 (TB3) | x     | x     |       | x     |
-| DisplayPort (DP)   | x     | x     |       | x     |
+| USB 2.0            | ✅    | ✅    | ✅   | ✅    |
+| USB 3.0            | ✅    | ✅    | ✅   | ✅    |
+| USB 3.1            | ✅    | ✅    | ✅   | ✅    |
+| USB 3.2            | ❌    | ❌    | ✅   | ❌    |
+| USB4 (upcoming)    | ❌    | ❌    | ✅   | ❌    |
+| Thunderbolt3 (TB3) | ❌    | ❌    | ✅   | ❌    |
+| DisplayPort (DP)   | ❌    | ❌    | ✅   | ❌    |
 
 ----------
 
@@ -144,6 +135,14 @@ TODO Spec Sheets
 Note:
 - I wrap in elec tape
 - MBP comes with 2.0
+
+----------
+
+![Unhelpful OEM](./images/unhelpful_oem.png)
+
+Note: 
+- This is getting better
+- Pictured is [Samsung Notebook 9](https://www.samsung.com/us/computing/windows-laptops/notebook-series-9/notebook-9-15-led-full-hd-core-i7-np900x5l-k02us/#specs)
 
 ----------
 
@@ -213,11 +212,7 @@ Note: Watt is ultimately what matters
 
 ## 10W = 5V * 2A
 
-----------
-
-TODO Pictures of how chargers are labeled
-
-Note: Many do not say `Watt` anywhere
+Note: Many chargers do not say `Watt` anywhere
 
 ----------
 
@@ -239,16 +234,15 @@ Note:
 | Quick Charge 1.0          | 10W = 5V at 2A                |
 | Quick Charge 2.0          | 18W = 5/9/12V at 3A           |
 | Quick Charge 3.0          | 18W = 3.6-20V at 2.5/4.6A     |
-| Quick Charge 4.0+         | QC: 18W = 3.6-20V at 2.5/4.6A |
-|                           | PD: 27W = 5/9V at 3A          |
-| Samsung AFC ~== QC 2.0    | 18W = 5/9V at 1.67/2A         |
+| Quick Charge 4.0+         | QC 3 & 27W PD (9V at 3A)      |
+| Samsung AFC               | 18W = 5/9V at 1.67/2A         |
 | One Plus WC 30            | 30W = 5V at 6A                |
 | Huawei SC 2.0             | 40W = 5/9/10V at 2/4A         |
 | Oppo VOOC 2               | 50W = 5V at 10A               |
 
 Note: 
+- Why do this? Predate PD & Very Fast
 - All implement Battery Charging 1.2
-- QC is backwards compatible
 - Samsung AFC ~== QC 2
 
 ----------
@@ -263,7 +257,9 @@ Note: Cable ~only relevant for 2A+
 
 ==========
 
-## First Party is Best
+## Maximizing your Speed
+
+Note: First party best unless apple
 
 ----------
 
@@ -271,16 +267,31 @@ Note: Cable ~only relevant for 2A+
 
 ==========
 
-## An Aside on Batteries
+## Batteries
 
-Note: Partial discharges are better for longevity
+Note: 
+- Why rapidly discharge at beginning
+- Partial discharges are better for longevity
+- Complete discharge to reset meter
+
+----------
+
+## Wireless Charging
+
+![Qi Logo](./images/qi_logo.svg)
+
+Note: 
+- Wattage Matters
+- Wireless less efficient
+- Safer for public charging
+- Samsung 15W; Apple 7.5W
 
 ==========
 
 Assets
 
 - [USB A 2.0](https://it.wikipedia.org/wiki/File:USB_Type-A_plug_coloured.svg)
-- [USB B 2.0](https://it.wikipedia.org/wiki/File:USB_Type-B_plug_coloured.svg)
+- USB B 2.0 by [Edwin Javier Nuñez](https://commons.wikimedia.org/wiki/File:USB2HAB.jpg)
 
 - USB A 2.0: Vahid alpha at [English Wikipedia](https://en.wikipedia.org/wiki/File:Usb_head_Cable.jpg)
 - USB A 3.x: Rainer Knäpper, [Free Art License](http://artlibre.org/licence/lal/en/)

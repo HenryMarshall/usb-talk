@@ -168,7 +168,7 @@ Note: 4 lane vs 2 lane
 
 ==========
 
-## Graceful Degredation
+## Graceful Degradation
 
 ----------
 
